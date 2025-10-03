@@ -22,7 +22,7 @@ To complete this workshop you will need to clone a repository with a copy of the
 6. [] A browser will automatically open, enter on the login input `user_events` (the password input will be greyed out once you enter the username) click on green **Sign in with your identity provider** button
 7. [] Click **Continue** button on the **Single sign-on** page
 8. [] Enter +++@lab.CloudPortalCredential(User1).Username+++ on the **Email, phone, or Skype** input box and click on **Next**
-9. [] Enter +++@lab.CloudPortalCredential(User1).AccessToken+++ on the temporary access token field and click on **Sign in with your entity provider** button
+9. [] Enter +++@lab.CloudPortalCredential(User1).AccessToken+++ on the **Temporary Access Pass** field and click on **Sign in with your entity provider** button
 10. [] Authorize the user by clicking continue and authorize VS Code access to user email by clicking on **Authorize Visual-Studio-Code*** button
 11. [] Click **open** when browser asks for the confirmation (**This site is trying to open Visual Studio Code.**)
 12. [] After Copilot is setup you should now have a **Walkthrough: GitHub Copilot Chat** open tab in Visual Studio Code
