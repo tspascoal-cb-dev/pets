@@ -44,7 +44,7 @@ Let's clone the repository you'll use for the lab.
 5. [] Click **Open** button when asked if you **Would like to open the cloned repository?**
 6. [] Click the **Yes, I trust the authors** button when asked.
 
-The code is now opened in Visual Studio, feel free to take a look at it or skip to the next section to start the app.
+The code is now open in Visual Studio Code, feel free to take a look at it or skip to the next section to start the app.
 
 ## Start the app
 
