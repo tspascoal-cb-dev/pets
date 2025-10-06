@@ -36,7 +36,7 @@ Let's use Agent mode to modify our backend to support multiple database systems.
 1. []  If available, select **Claude Sonnet 4.5** from the list of available models.
 1. []  Send the following prompt to the agent (feel free to make changes to the wording if you'd like to experiment):
 
-    ```
+    ```text
     Add support for Microsoft SQL Server and PostgreSQL in the backend. If there is an env variable called MS_SQL_CONN_STRING or PGSQL_CONN_STRING use that connection string to connect to the server. Otherwise keep using SQLite like currently. Install additional dependencies and or drivers as needed.
     ```
 
@@ -79,7 +79,7 @@ The agent will typically:
 
 **If you notice** that the changes to **server/seed_database.py** were not made because it's not on the `changed files` list at the bottom of Copilot Chat window, you can prompt the agent with a more specific prompt. If the changes were made skip to the next section:
 
-```
+```text
 Make sure to update the server/seed_database.py file to support Microsoft SQL Server and PostgreSQL as well.
 ```
 
