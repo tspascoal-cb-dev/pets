@@ -49,7 +49,7 @@ Let's use Agent mode to modify our backend to support multiple database systems.
 As the agent works, you'll see it taking various actions. Watch the terminal window and the VS Code interface to observe:
 
 - The agent analyzing the codebase to understand the current database implementation
-- The agent will most likely ask for your permission to execute code, look at his request and authorize it
+- The agent will most likely ask for your permission to execute code, examine his request(s) and authorize it
 - Installation of new Python packages (like `psycopg2` for PostgreSQL or `pyodbc` for SQL Server)
 - Code changes being made across multiple files
 - The agent's reasoning about each step it's taking
