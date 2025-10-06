@@ -137,7 +137,6 @@ Choose the path that interests you most, or explore both to get the full cloud d
 
 - [Copilot Agent mode][copilot-agent]
 - [SQLAlchemy documentation][sqlalchemy-docs]
-- [Working with environment variables][env-vars]
 
 [copilot-agent]: https://code.visualstudio.com/docs/copilot/chat/chat-agent-mode
 [sqlalchemy-docs]: https://docs.sqlalchemy.org/
