@@ -37,7 +37,9 @@ Let's use Agent mode to modify our backend to support multiple database systems.
 1. []  Send the following prompt to the agent (feel free to make changes to the wording if you'd like to experiment):
 
     ```text
-    Add support for Microsoft SQL Server and PostgreSQL in the backend. If there is an env variable called MS_SQL_CONN_STRING or PGSQL_CONN_STRING use that connection string to connect to the server. Otherwise keep using SQLite like currently. Install additional dependencies and or drivers as needed.
+    Add support for Microsoft SQL Server and PostgreSQL in the backend. 
+    If there is an env variable called MS_SQL_CONN_STRING or PGSQL_CONN_STRING use that connection string to connect to the server. 
+    Otherwise keep using SQLite like currently. Install additional dependencies and or drivers as needed.
     ```
 
 > [!NOTE]
