@@ -68,10 +68,10 @@ The agent should make modifications to at least two key files:
 
 The agent will typically:
 
-1. Add logic to check for environment variables (`MS_SQL_CONN_STRING` or `PGSQL_CONN_STRING`)
+1. Add logic to check for environment variables (**MS_SQL_CONN_STRING** or **PGSQL_CONN_STRING**)
 2. Configure SQLAlchemy to use the appropriate database connection based on available environment variables
-3. Install required database drivers (like `pyodbc`, `psycopg2-binary`)
-4. Update the `requirements.txt` file with new dependencies
+3. Install required database drivers (like **pyodbc**, **psycopg2-binary**)
+4. Update the **requirements.txt** file with new dependencies
 5. Ensure backward compatibility with SQLite as the default
 
 ## Handling (potential) incomplete changes
@@ -79,7 +79,11 @@ The agent will typically:
 > [!IMPORTANT]
 > Sometimes the agent might not modify all necessary files on the first attempt. This can happen if the prompt isn't explicit enough or if the agent prioritizes certain changes over others. This is a normal part of working with AI agents, and you can guide them with follow-up prompts.
 
-**If you notice** that the changes to **server/seed_database.py** were not made because it's not on the `changed files` list at the bottom of Copilot Chat window, you can prompt the agent with a more specific prompt. If the changes were made skip to the next section:
+**If you notice** that the changes to **server/seed_database.py** were not made because it's not on the **changed files** list at the bottom of Copilot Chat window, you can prompt the agent with a more specific prompt. 
+
+![List of changed files](images/4-cloudify-backend.md)
+
+If the changes were made skip to the next section, otherwise use the following prompt:
 
 ```text
 Make sure to update the server/seed_database.py file to support Microsoft SQL Server and PostgreSQL as well.
@@ -91,19 +95,20 @@ The agent will then focus on making the necessary updates to that specific file.
 
 Once the agent completes its work:
 
-1. []  Review all the code changes made by the agent across the different files.
-1. []  Check that the `requirements.txt` file has been updated with the new database drivers.
-1. []  Ensure the application still works with SQLite by running it:
+1. []  Review the code changes made by the agent across the different files (click on the file names in the **changed files** list at the bottom of the Copilot Chat window to see diffs).
+1. []  Check that the **requirements.txt** file has been updated with the new database drivers.
+1. []  Ensure the application still works with SQLite by opening it:
     - Navigate to +++http://localhost:5100/api/dogs+++ to verify the API still works
     - Check the frontend at +++http://localhost:4321+++ to ensure the website loads correctly
 1. []  Run the Python tests to validate nothing broke (in case the agent wasn't executed the tests already):
     
-    ```bash
-    source venv/bin/Activate.ps1
-    python -m unittest discover -s server
+    ```ps1
+    venv/Scripts/Activate.ps1
+    cd server
+    python -m unittest test_app.py
     ```
 
-5. []  If all tests pass and the application works correctly, select **Accept** to keep the changes.
+5. []  If all tests pass and the application works correctly, select **Keep** to keep the changes.
 
 > [!NOTE]
 > While we're not actually connecting to SQL Server or PostgreSQL in this exercise, the code is now ready to support them when those environment variables are provided in a cloud deployment.
@@ -118,6 +123,15 @@ You've successfully used GitHub Copilot's Agent mode to add enterprise database 
 - Work iteratively to complete complex tasks
 
 This makes your application more flexible and ready for cloud deployment.
+
+## What's next?
+
+Now that your application supports enterprise databases, you can explore additional cloud capabilities:
+
+- **Using the MSSQL extension for Visual Studio Code** - Learn how to use Copilot to interact with SQL Server databases directly from VS Code
+- **Using GitHub Copilot for Azure** - Discover how to interact with Azure resources using Copilot's Azure integration
+
+Choose the path that interests you most, or explore both to get the full cloud development experience!
 
 ## Resources
 
