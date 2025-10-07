@@ -83,7 +83,9 @@ The agent will typically:
 
 ![List of changed files](images/4-cloudify-backend.md)
 
-If the changes were made skip to the next section, otherwise use the following prompt:
+If the changes were made skip to the next section, otherwise continue. This is the cost we pay for being ambiguous on our prompt.
+
+Use the following prompt:
 
 ```text
 Make sure to update the server/seed_database.py file to support Microsoft SQL Server and PostgreSQL as well.
